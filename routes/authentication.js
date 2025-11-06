@@ -23,7 +23,7 @@ router.post("/login", (request, response) => {
   }
   response.json({
     result: "Logged in successfully",
-    token: "alkjdvhgasbdasdjnbasdhb23hi8g4uu2c",
+    token: "my_auth_token",
   });
 });
 

@@ -7,7 +7,7 @@ const authMiddleware = (request, response, next) => {
     ?.split("Bearer")[1]
     ?.replace(" ", "");
 
-  if (token !== "alkjdvhgasbdasdjnbasdhb23hi8g4uu2c") {
+  if (token !== "my_auth_token") {
     response.status(401).json({ error: "Invalid token, login again!!" });
     return;
   }
