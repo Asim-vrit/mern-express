@@ -3,11 +3,13 @@ const bodyParser = require("body-parser");
 const products = require("./routes/products");
 const users = require("./routes/users");
 const auth = require("./routes/authentication");
+const { logMiddleware } = require("./utils/middlewares");
 
 const app = express();
 const parser = bodyParser.json();
 
 app.use(parser);
+app.use(logMiddleware);
 app.use(products);
 app.use(users);
 app.use(auth);

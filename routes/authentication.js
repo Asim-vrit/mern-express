@@ -4,7 +4,6 @@ const router = express.Router();
 
 router.post("/login", (request, response) => {
   const body = request.body;
-  console.log(body);
   if (!body.username || !body.password) {
     response
       .status(400)
